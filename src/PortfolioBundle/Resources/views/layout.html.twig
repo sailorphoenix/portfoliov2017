@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ include('PortfolioBundle::inc/menu_front.html.twig') }}
+    {% block container %}{% endblock %}
+    {{ include('PortfolioBundle::inc/footer_front.html.twig') }}
+
+{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {% include 'PortfolioBundle::inc/stylesheets.assetics.html.twig' %}
+{% endblock %}

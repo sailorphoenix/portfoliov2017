@@ -1,0 +1,9 @@
+{% if app.environment == 'dev' %}
+  <link rel="stylesheet" href="{{ asset('bundles/portfolio/css/css/main_front.css') }}">
+{% else %}
+  {% stylesheets filter='cssrewrite'
+    'bundles/portfolio/css/css/main_front.css'
+  %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+  {% endstylesheets %}
+{% endif %}

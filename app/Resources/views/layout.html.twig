@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ include('menus/menu_front.html.twig') }}
+    {% block container %}{% endblock %}
+    {{ include('footer/footer_front.html.twig') }}
+
+{% endblock %}

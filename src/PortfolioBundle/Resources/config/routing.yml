@@ -1,0 +1,7 @@
+portfolio_homepage:
+    path:     /
+    defaults: { _controller: PortfolioBundle:Default:index }
+
+portfolio_cv:
+    path:     /curriculum-vitae
+    defaults: { _controller: PortfolioBundle:Default:cv }

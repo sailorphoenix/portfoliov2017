@@ -1,0 +1,7 @@
+{% if app.environment == 'dev' %}
+  <script src="{{ asset('bundles/portfolio/js/cv.js') }}"></script>
+{% else %}
+  {% javascripts 'bundles/portfolio/js/cv.js' %}
+    <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+{% endif %}

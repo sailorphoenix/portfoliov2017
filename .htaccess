@@ -1,0 +1,10 @@
+php_flag allow_url_fopen on
+php_flag allow_url_include on
+php_flag short_open_tag off
+php_flag detect_unicode off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ web/$1 [QSA,L]
+</IfModule>

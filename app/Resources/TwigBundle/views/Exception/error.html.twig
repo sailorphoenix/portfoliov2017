@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ include('PortfolioBundle::inc/menu_front.html.twig') }}
+    {% block container %}
+    <div class="container">
+      <div class="row">
+        <div class="center-block text-center margin-20">
+          La page que vous essayez de visualiser, ne vous est pas accessible :(
+          <br>
+          Rendez-vous sur la <a href="{{ path('portfolio_homepage') }}">page d'accueil</a> ou si vous avez besoin d'aide, contactez moi via les réseaux sociaux.
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+
+{% endblock %}

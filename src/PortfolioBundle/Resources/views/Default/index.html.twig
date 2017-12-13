@@ -1,0 +1,62 @@
+{% extends 'PortfolioBundle::layout.html.twig' %}
+
+{% block title %}Anaïs Hervouin | Accueil{% endblock %}
+{% block head %}<link rel="alternate" href="http://www.anaishervouin.fr/" hreflang="fr" />{% endblock %}
+{% block description %}Portfolio d'Anais Hervouin, ingénieur en technologie de l'information.
+Vous trouverez mon parcours, mon expérience ainsi que les projets conçus.{% endblock %}
+{% block keywords %}
+Anais, Hervouin, Anais Hervouin, Hervouin Anais, Anaïs, Anaïs Hervouin, Hervouin Anaïs, création web, créateur web, informatique,
+Portfolio, Programmation web, Portfolio, E-Portfolio, Portfolio en ligne, web, internet, page internet, pages internet,
+PHP, Drupal, Symfony, Ingénieur, Ingénieur en technologie de l'information, CV,
+expériences, Montpellier, curriculum vitae,expériences, compétences, PHP, jQuery, HTML, CSS, développement, développeur, développeur web
+{% endblock %}
+
+{% block container %}
+  <div id="homepage">
+    <div class="container-fluid background-green text-white">
+      <h1>Bonjour à vous!</h1>
+      <br/>
+      <p class="lead text-justify">
+        Je me présente, Anaïs Hervouin, développeuse PHP Full Stack maîtrisant les technologies telles que Symfony, Drupal, HTML, CSS, Bootstrap, Less...
+        <br/>
+        Ma mission est de travailler en collaboration avec les membres d'un ou plusieurs projets à développer.
+        <br/>
+        J'ai l'occasion d'intervenir sur les différentes phases de vie d'un projet (analyses, développements, rédaction, tests).
+      </p>
+      <p class="lead text-justify">
+        Forte de mes 4 années d'expériences dans le monde professionnel,
+        je suis également une personne autodictate n'hésitant pas à me former continuellement aux dernières technologies web.
+        Motivée, autonome, et fière de partager mes connaissances avec d'autres personnes, mon ambition est de devenir experte dans mon domaine qui est le PHP et les technologies l'utilisant.
+      </p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 button-fixed-bottom-bloc">
+          <h2>Expériences</h2>
+          <p class="text-justify">
+            Quatre ans d'expériences professionnelles à mon actif précédées de deux stages en développement PHP, j'ai pu évolué sur diverses postes occupés me procurant de nouvelles connaissances et de techniques.
+          </p>
+          <a class="btn btn-primary homeblock" href="{{ path('portfolio_cv') }}#experiences" role="button">Découvrir mon expérience &raquo; </a>
+        </div>
+        <div class="col-md-4 button-fixed-bottom-bloc">
+          <h2>Compétences</h2>
+          <p class="text-justify">
+            PHP, CMS Drupal, Framework Symfony... Diverses compétences ont été acquises durant ma scolarité et mes années d'expériences professionnelles.
+            <br/>
+            Ces dernières sont sans cesse compléter par de nouvelles compétences pour améliorer l'expérience utilisateur.
+          </p>
+          <a class="btn btn-primary homeblock" href="{{ path('portfolio_cv') }}#competences" role="button">Découvrir mes compétences &raquo; </a>
+        </div>
+        <div class="col-md-4 button-fixed-bottom-bloc">
+          <h2>Formations</h2>
+          <p class="text-justify">
+            Quatre années d'informatique après le BAC, formation Drupal, formation sur l'argumentation,
+            j'ai eu l'occasion d'être formée sur différents aspects, important voir nécessaire dans le monde du web.
+          </p>
+          <a class="btn btn-primary homeblock" href="{{ path('portfolio_cv') }}#formations" role="button">Découvrir mon parcours &raquo; </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

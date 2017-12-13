@@ -1,0 +1,18 @@
+{% if app.environment == 'dev' %}
+  <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/main_rwd.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/custom-bootstrap.css') }}">
+{% else %}
+  {% stylesheets filter='cssrewrite'
+    'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
+    'assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css'
+    'css/css/main.css'
+    'css/css/custom-bootstrap.css'
+  %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+  {% endstylesheets %}
+{% endif %}
+
+

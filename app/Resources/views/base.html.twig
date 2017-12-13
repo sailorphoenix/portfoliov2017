@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Description" content="{% block description %}{% endblock %}">
+        <meta name="Keywords" content="{% block keywords %}{% endblock %}">
+        <meta name="Copyright" content="anaishervouin2015">
+        <meta name="Author" content="Anais Hervouin">
+        <meta name="Revisit-After" content="10 days">
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}{% endblock %}
+        {% block stylesheets %}
+          {% include 'inc/stylesheets.assetics.html.twig' %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('fav.ico') }}" />
+        <script type="application/ld+json">
+            { "@context" : "http://schema.org",
+              "@type" : "Person",
+              "name" : "Anais Hervouin",
+              "url" : "http://www.anaishervouin.fr",
+              "sameAs" : [ "https://www.facebook.com/PortfolioAnaisHervouin/",
+                "https://fr.linkedin.com/in/anaishervouin",
+                "http://fr.viadeo.com/fr/profile/ana%C3%AFs.hervouin"] 
+            }
+        </script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+          {% include 'inc/javascript.assetics.html.twig' %}
+        {% endblock %}
+    </body>
+</html>
